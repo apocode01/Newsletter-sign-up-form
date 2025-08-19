@@ -1,0 +1,91 @@
+:root {
+    --red: hsl(4, 100%, 67%);
+    --blue800: hsl(234, 29%, 20%);
+    --blue700: hsl(235, 18%, 26%);
+    --grey: hsl(0, 0%,58%);
+    --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 0.625rem);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--blue700);
+    padding: 1.25rem;
+}
+
+.formState {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    max-width: 57rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: solid 1px;
+    margin: 0 3.5rem;
+}
+
+.heading {
+    font-size: 50px;
+}
+
+.updates {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-position: inside;
+    list-style-image: url(assets/images/icon-list.svg);
+}
+
+.updates li {
+    margin: auto 0;
+}
+
+.imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--white);
+}
+
+.attribution a { 
+    color: hsl(228, 100%, 70%); 
+}
