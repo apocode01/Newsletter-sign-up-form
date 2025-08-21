@@ -6,7 +6,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
   <main>
@@ -14,7 +13,10 @@
     <!-- Sign-up form start -->
 
     <div class="formState">
-      <div class="content">   
+      <div class="mobileImg">
+        <img src="assets/images/illustration-sign-up-mobile.svg" alt="Sign Up Image">
+      </div>
+      <div class="content">  
         <h1 class="heading">Stay updated!</h1>
 
         <p class="paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
@@ -31,13 +33,12 @@
             <span aria-live="polite" id="name-error"></span>
           </div>
           <input id="name" name="name" placeholder="email@company.com"/>
+          <button class="subscribe" type="submit">
+            Subscribe to monthly newsletter
+          </button>
         </form>
-
-        <button class="subscribe">
-          Subscribe to monthly newsletter
-        </button>
       </div>
-      <div class="imgContainer">
+      <div class="desktopImg">
         <img src="assets/images/illustration-sign-up-desktop.svg" alt="Sign Up Image">
       </div> 
     </div>
@@ -56,13 +57,13 @@
     </div>
 
     <!-- Success message end -->
-      
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/apocode01" target="_blank">Apostolos Panousakis</a>.
-    </div>
-
   </main>
+  <div class="attribution">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/apocode01" target="_blank">Apostolos Panousakis.</a>
+    </p>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>
