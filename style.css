@@ -223,6 +223,7 @@ img {
         justify-content: flex-start;
         padding: 0;
         background-color: var(--white);
+        min-width: 375px;
     }
 
     .formState {
