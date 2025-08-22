@@ -47,6 +47,7 @@ body {
     margin-bottom: 2rem;
     border-radius: 2rem;
     max-width: 57rem;
+    color: var(--blue800);
 }
 
 .content {
@@ -82,8 +83,13 @@ body {
     display: inline-block;
     background-image: url('assets/images/icon-list.svg');
     background-size: contain;
-    min-width: 1.25rem;
-    min-height: 1.25rem;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+}
+
+.formInfo {
+    width: 100%;
 }
 
 .form {
@@ -108,9 +114,18 @@ body {
 #name.nameError {
     border-color: var(--red);
     background-color: rgba(255,232,230,255);
+    color: var(--red);
 }
 
-.subscribe {
+#name-error {
+    float: right;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.button {
+    width: 100%;
     margin-top: 0.5rem;
     padding: 1.25rem;
     font-size: 16px;
@@ -123,7 +138,7 @@ body {
     cursor: pointer;
 }
 
-.subscribe:hover {
+.button:hover {
     background: linear-gradient(90deg, #ff7a7a, #FF6A3A);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -146,11 +161,64 @@ img {
     color: var(--red); 
 }
 
-.mobileImg {
+.mobileImg, .tabletImg {
     display: none;
 }
 
-@media only screen and (max-width: 40rem) {
+.successState {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 3.5rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    max-width: 30rem;
+    gap: 1.5rem;
+    color: var(--blue800);
+}
+
+.successState h1 {
+    font-size: 50px;
+    line-height: 3rem;
+}
+
+.successState p {
+    line-height: 1.5rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 60rem) {
+
+    .formState {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1.5rem;
+    }
+
+    .desktopImg, .mobileImg {
+        display: none;
+    }
+
+    .tabletImg {
+        display: flex;
+        height: 19rem;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 32rem) {
     body {
         justify-content: flex-start;
         padding: 0;
@@ -168,7 +236,7 @@ img {
         max-width: 375px;
     }
 
-    .desktopImg {
+    .desktopImg, .tabletImg {
         display: none;
     }
 
@@ -182,7 +250,12 @@ img {
         margin: 0;
     }
 
+    .successState {
+        height: 85vh;
+    }
+    
     .attribution {
+        max-height: 15vh;
         width: 100%;
         flex: 1;
         display: flex;
